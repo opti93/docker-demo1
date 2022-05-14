@@ -3,7 +3,7 @@ services:
   api:
     build:
       context: .
-      dockerfile: ./apps/api/Dockerfile
+      dockerfile: ./apps/api/dockerfile
     restart: always
     container_name: api
     volumes:
@@ -18,7 +18,7 @@ services:
   app:
     build:
       context: .
-      dockerfile: ./apps/app/Dockerfile
+      dockerfile: ./apps/app/dockerfile
     restart: always
     container_name: app
     networks:
@@ -29,7 +29,7 @@ services:
   converter:
     build:
       context: .
-      dockerfile: ./apps/converter/Dockerfile
+      dockerfile: ./apps/converter/dockerfile
     restart: always
     volumes:
     - ./.env:/opt/converter/.env
